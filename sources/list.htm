@@ -1,0 +1,12 @@
+<html>
+    <head>
+        <title>This is a fixed title</title>
+    </head>
+    <body>
+        <ul>
+            {% for person in persons %}
+            <li>{{ person.name }}   {{person.age}} {{ person.sex }}</li>
+            {% endfor %}
+        </ul>
+    </body>
+</html>
