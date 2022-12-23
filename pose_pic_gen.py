@@ -42,6 +42,7 @@ class Keys(object):
     k_direction = "direction"
     k_speed = "speed"
     k_pose = "pose"
+    k_saved_images = "saved_images"
 
 
 class Consts(object):
@@ -219,6 +220,7 @@ class RoadPrinter(object):
         plan_failed_reas = self.trajectory.plan_failed_reasons
         car_loc = self.trajectory.car_loc
         parking_space = self.trajectory.parking_space
+        image_paths = list()
         for i, expect_track in enumerate(expect_tracks):
             self.init_plot()
             self.plot_one_waypoint(expect_track, actual_track)
@@ -237,6 +239,8 @@ class RoadPrinter(object):
             # img_name = img_name.replace(" ", "_")
             img_path = os.path.join(self.image_path, img_name)
             plt.savefig(img_path)
+            image_paths.append(img_path)
+        return image_paths
             
 
 class TrackParser(object):
