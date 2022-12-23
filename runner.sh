@@ -1,2 +1,2 @@
 #!/bin/bash
-pytest -sv render_test.py
+pytest -sv tests/render_test.py

@@ -1,0 +1,1109 @@
+{
+    "#all indices start from": 0,
+    "all_pass": false,
+    "passed_cases": 22,
+    "failed_cases": 2,
+    "pass_rate": 91.66666666666667,
+    "test_cases": [
+        {
+            "pass": true,
+            "text_pass": true,
+            "data_pass": true,
+            "descriptions": {
+                "Call Coverage": "",
+                "Calls": "",
+                "Control Flow Document": "https://spaces.telenav.com:8443/display/TC/Planning+-+Software+Detailed+Design",
+                "Control Flow Verification": "Pass",
+                "Data Flow Document": "https://spaces.telenav.com:8443/pages/viewpage.action?pageId=189015770",
+                "Data Flow Verification": "Pass",
+                "Description": "To test the planning for vertical parking in with head",
+                "Design Document": "https://spaces.telenav.com:8443/display/TC/Planning+-+Software+Detailed+Design",
+                "JIRA ID": "XW-6513",
+                "Pass Criteria": "1, Output message's content and number are as expected.",
+                "Test Case ID": "1",
+                "Test Method": "Interface test and requirement test(3 TMQ interfaces simulation)"
+            },
+            "channels": [
+                {
+                    "channel_id": "30015",
+                    "topic_name": "PlanningStatus",
+                    "text_pass": true,
+                    "data_pass": true,
+                    "failed_text_indices": [],
+                    "failed_data_indices": [],
+                    "image_similaritiy": [],
+                    "expected_messages": [
+                        "{\n\t\"status\" : \"kPlanSearching\",\n\t\"timestamp\" : \"0\",\n\t\"tmq_header\" : \n\t{\n\t\t\"tmq_stamp\" : \"0\"\n\t}\n}",
+                        "{\n\t\"status\" : \"kPlanSuccessed\",\n\t\"timestamp\" : \"0\",\n\t\"tmq_header\" : \n\t{\n\t\t\"tmq_stamp\" : \"0\"\n\t}\n}"
+                    ],
+                    "output_messages": [
+                        "{\"tmq_header\":{\"tmq_stamp\":\"1671698788721\"},\"timestamp\":\"28055135862340\",\"status\":\"kPlanSearching\"}",
+                        "{\"tmq_header\":{\"tmq_stamp\":\"1671698788916\"},\"timestamp\":\"28055330884103\",\"status\":\"kPlanSuccessed\"}"
+                    ],
+                    "saved_images": []
+                },
+                {
+                    "channel_id": "30013",
+                    "topic_name": "TrajectoryFully",
+                    "text_pass": true,
+                    "data_pass": true,
+                    "failed_text_indices": [],
+                    "failed_data_indices": [],
+                    "image_similaritiy": [],
+                    "expected_messages": [
+                        "Start& End Point, Expected start: [ x: 0, y: 0.0413218, theta: 0 ]\n<br/>Expected end: [ x: 0, y: -6.5, theta: 1.5708 ]\n<br/><br/>Expected Turn count: 1<br/><br/>"
+                    ],
+                    "output_messages": [
+                        "Current dtw value: 0<br/><br/><b>Pass, Pose Verify</b><br/>Expect track and actual track start& end point matched<br/>Start& End Point, Actual start: [ x: 0, y: 0.0413218, theta: 0 ]\n<br/>Actual end: [ x: 0, y: -6.5, theta: 1.5708 ]\n<br/>Relation start: [ x: 0, y: 0, theta: 0 ]\n<br/>Relation end: [ x: 0, y: 0, theta: 0 ]\n<br/><br/><b>Pass, Turn Count Verify</b><br/>Actutal turn count 1 less than max turn count: 9, Passed<br/><br/><b>Pass, Turn Count Diff Verify</b><br/>Actual Turn count: 1 less than or equal to Expect Turn count: 1, pass <br/>Actual Turn count: 1<br/><br/><b>Pass, Turning Curve Rate</b><br/>Turning curves comparison successfully<br/><br/>"
+                    ],
+                    "saved_images": []
+                }
+            ]
+        },
+        {
+            "pass": true,
+            "text_pass": true,
+            "data_pass": true,
+            "descriptions": {
+                "Control Flow Document": "https://spaces.telenav.com:8443/display/TC/Planning+-+Software+Detailed+Design",
+                "Control Flow Verification": "Pass",
+                "Data Flow Document": "https://spaces.telenav.com:8443/pages/viewpage.action?pageId=189015770",
+                "Description": "To test the planning for parallel parking in with tail",
+                "JIRA ID": "XW-6513",
+                "Pass Criteria": "1, Output message's content and number are as expected.",
+                "Test Case ID": "2",
+                "Test Method": "Interface test and requirement test(3 TMQ interfaces simulation)"
+            },
+            "channels": [
+                {
+                    "channel_id": "30015",
+                    "topic_name": "PlanningStatus",
+                    "text_pass": true,
+                    "data_pass": true,
+                    "failed_text_indices": [],
+                    "failed_data_indices": [],
+                    "image_similaritiy": [],
+                    "expected_messages": [
+                        "{\n\t\"status\" : \"kPlanSearching\",\n\t\"timestamp\" : \"0\",\n\t\"tmq_header\" : \n\t{\n\t\t\"tmq_stamp\" : \"0\"\n\t}\n}",
+                        "{\n\t\"status\" : \"kPlanSuccessed\",\n\t\"timestamp\" : \"0\",\n\t\"tmq_header\" : \n\t{\n\t\t\"tmq_stamp\" : \"0\"\n\t}\n}"
+                    ],
+                    "output_messages": [
+                        "{\"tmq_header\":{\"tmq_stamp\":\"1671698808724\"},\"timestamp\":\"28075138054983\",\"status\":\"kPlanSearching\"}",
+                        "{\"tmq_header\":{\"tmq_stamp\":\"1671698808872\"},\"timestamp\":\"28075286883070\",\"status\":\"kPlanSuccessed\"}"
+                    ],
+                    "saved_images": []
+                },
+                {
+                    "channel_id": "30013",
+                    "topic_name": "TrajectoryFully",
+                    "text_pass": true,
+                    "data_pass": true,
+                    "failed_text_indices": [],
+                    "failed_data_indices": [],
+                    "image_similaritiy": [],
+                    "expected_messages": [
+                        "Start& End Point, Expected start: [ x: 0, y: 0.0413218, theta: 0 ]\n<br/>Expected end: [ x: 0, y: -6.5, theta: 1.5708 ]\n<br/><br/>Expected Turn count: 1<br/><br/>"
+                    ],
+                    "output_messages": [
+                        "Current dtw value: 0<br/><br/><b>Pass, Pose Verify</b><br/>Expect track and actual track start& end point matched<br/>Start& End Point, Actual start: [ x: 0, y: 0.0413218, theta: 0 ]\n<br/>Actual end: [ x: 0, y: -6.5, theta: 1.5708 ]\n<br/>Relation start: [ x: 0, y: 0, theta: 0 ]\n<br/>Relation end: [ x: 0, y: 0, theta: 0 ]\n<br/><br/><b>Pass, Turn Count Verify</b><br/>Actutal turn count 1 less than max turn count: 9, Passed<br/><br/><b>Pass, Turn Count Diff Verify</b><br/>Actual Turn count: 1 less than or equal to Expect Turn count: 1, pass <br/>Actual Turn count: 1<br/><br/><b>Pass, Turning Curve Rate</b><br/>Turning curves comparison successfully<br/><br/>"
+                    ],
+                    "saved_images": []
+                }
+            ]
+        },
+        {
+            "pass": true,
+            "text_pass": true,
+            "data_pass": true,
+            "descriptions": {
+                "Control Flow Document": "https://spaces.telenav.com:8443/display/TC/Planning+-+Software+Detailed+Design",
+                "Control Flow Verification": "Pass",
+                "Data Flow Document": "https://spaces.telenav.com:8443/pages/viewpage.action?pageId=189015770",
+                "Description": "To test the planning for slant parking",
+                "JIRA ID": "XW-6513",
+                "Pass Criteria": "1, Output message's content and number are as expected.",
+                "Test Case ID": "3",
+                "Test Method": "Interface test and requirement test(3 TMQ interfaces simulation)"
+            },
+            "channels": [
+                {
+                    "channel_id": "30015",
+                    "topic_name": "PlanningStatus",
+                    "text_pass": true,
+                    "data_pass": true,
+                    "failed_text_indices": [],
+                    "failed_data_indices": [],
+                    "image_similaritiy": [],
+                    "expected_messages": [
+                        "{\n\t\"status\" : \"kPlanSearching\",\n\t\"timestamp\" : \"0\",\n\t\"tmq_header\" : \n\t{\n\t\t\"tmq_stamp\" : \"0\"\n\t}\n}",
+                        "{\n\t\"status\" : \"kPlanSuccessed\",\n\t\"timestamp\" : \"0\",\n\t\"tmq_header\" : \n\t{\n\t\t\"tmq_stamp\" : \"0\"\n\t}\n}"
+                    ],
+                    "output_messages": [
+                        "{\"tmq_header\":{\"tmq_stamp\":\"1671698820726\"},\"timestamp\":\"28087140231734\",\"status\":\"kPlanSearching\"}",
+                        "{\"tmq_header\":{\"tmq_stamp\":\"1671698820848\"},\"timestamp\":\"28087262185864\",\"status\":\"kPlanSuccessed\"}"
+                    ],
+                    "saved_images": []
+                },
+                {
+                    "channel_id": "30013",
+                    "topic_name": "TrajectoryFully",
+                    "text_pass": true,
+                    "data_pass": true,
+                    "failed_text_indices": [],
+                    "failed_data_indices": [],
+                    "image_similaritiy": [],
+                    "expected_messages": [
+                        "Start& End Point, Expected start: [ x: -0.0161438, y: 0.0450087, theta: -0.0467238 ]\n<br/>Expected end: [ x: -3.23133, y: -8.50394, theta: 1.18564 ]\n<br/><br/>Expected Turn count: 1<br/><br/>"
+                    ],
+                    "output_messages": [
+                        "Current dtw value: 0<br/><br/><b>Pass, Pose Verify</b><br/>Expect track and actual track start& end point matched<br/>Start& End Point, Actual start: [ x: -0.0161438, y: 0.0450087, theta: -0.0467238 ]\n<br/>Actual end: [ x: -3.23133, y: -8.50394, theta: 1.18564 ]\n<br/>Relation start: [ x: 0, y: 0, theta: 0 ]\n<br/>Relation end: [ x: 0, y: 0, theta: 0 ]\n<br/><br/><b>Pass, Turn Count Verify</b><br/>Actutal turn count 1 less than max turn count: 9, Passed<br/><br/><b>Pass, Turn Count Diff Verify</b><br/>Actual Turn count: 1 less than or equal to Expect Turn count: 1, pass <br/>Actual Turn count: 1<br/><br/><b>Pass, Turning Curve Rate</b><br/>Turning curves comparison successfully<br/><br/>"
+                    ],
+                    "saved_images": []
+                }
+            ]
+        },
+        {
+            "pass": true,
+            "text_pass": true,
+            "data_pass": true,
+            "descriptions": {
+                "Control Flow Document": "https://spaces.telenav.com:8443/display/TC/Planning+-+Software+Detailed+Design",
+                "Control Flow Verification": "Pass",
+                "Data Flow Document": "https://spaces.telenav.com:8443/pages/viewpage.action?pageId=189015770",
+                "Description": "Slant Parking 30 degree Tail In",
+                "JIRA ID": "XW-6513",
+                "Pass Criteria": "1, Output message's content and number are as expected.",
+                "Test Case ID": "4",
+                "Test Method": "Interface test and requirement test(3 TMQ interfaces simulation)"
+            },
+            "channels": [
+                {
+                    "channel_id": "30015",
+                    "topic_name": "PlanningStatus",
+                    "text_pass": true,
+                    "data_pass": true,
+                    "failed_text_indices": [],
+                    "failed_data_indices": [],
+                    "image_similaritiy": [],
+                    "expected_messages": [
+                        "{\n\t\"status\" : \"kPlanSearching\",\n\t\"timestamp\" : \"0\",\n\t\"tmq_header\" : \n\t{\n\t\t\"tmq_stamp\" : \"0\"\n\t}\n}",
+                        "{\n\t\"status\" : \"kPlanSuccessed\",\n\t\"timestamp\" : \"0\",\n\t\"tmq_header\" : \n\t{\n\t\t\"tmq_stamp\" : \"0\"\n\t}\n}"
+                    ],
+                    "output_messages": [
+                        "{\"tmq_header\":{\"tmq_stamp\":\"1671698832728\"},\"timestamp\":\"28099142163525\",\"status\":\"kPlanSearching\"}",
+                        "{\"tmq_header\":{\"tmq_stamp\":\"1671698832828\"},\"timestamp\":\"28099242549101\",\"status\":\"kPlanSuccessed\"}"
+                    ],
+                    "saved_images": []
+                },
+                {
+                    "channel_id": "30013",
+                    "topic_name": "TrajectoryFully",
+                    "text_pass": true,
+                    "data_pass": true,
+                    "failed_text_indices": [],
+                    "failed_data_indices": [],
+                    "image_similaritiy": [],
+                    "expected_messages": [
+                        "Start& End Point, Expected start: [ x: -0.0503616, y: -0.0908313, theta: 0.534562 ]\n<br/>Expected end: [ x: -3.23133, y: -8.50394, theta: 1.18564 ]\n<br/><br/>Expected Turn count: 1<br/><br/>"
+                    ],
+                    "output_messages": [
+                        "Current dtw value: 0<br/><br/><b>Pass, Pose Verify</b><br/>Expect track and actual track start& end point matched<br/>Start& End Point, Actual start: [ x: -0.0503616, y: -0.0908313, theta: 0.534562 ]\n<br/>Actual end: [ x: -3.23133, y: -8.50394, theta: 1.18564 ]\n<br/>Relation start: [ x: 0, y: 0, theta: 0 ]\n<br/>Relation end: [ x: 0, y: 0, theta: 0 ]\n<br/><br/><b>Pass, Turn Count Verify</b><br/>Actutal turn count 1 less than max turn count: 9, Passed<br/><br/><b>Pass, Turn Count Diff Verify</b><br/>Actual Turn count: 1 less than or equal to Expect Turn count: 1, pass <br/>Actual Turn count: 1<br/><br/><b>Pass, Turning Curve Rate</b><br/>Turning curves comparison successfully<br/><br/>"
+                    ],
+                    "saved_images": []
+                }
+            ]
+        },
+        {
+            "pass": true,
+            "text_pass": true,
+            "data_pass": true,
+            "descriptions": {
+                "Control Flow Document": "https://spaces.telenav.com:8443/display/TC/Planning+-+Software+Detailed+Design",
+                "Control Flow Verification": "Pass",
+                "Data Flow Document": "https://spaces.telenav.com:8443/pages/viewpage.action?pageId=189015770",
+                "Description": "Parallel parking 60 degree Tail in",
+                "JIRA ID": "XW-6513",
+                "Pass Criteria": "1, Output message's content and number are as expected.",
+                "Test Case ID": "5",
+                "Test Method": "Interface test and requirement test(3 TMQ interfaces simulation)"
+            },
+            "channels": [
+                {
+                    "channel_id": "30015",
+                    "topic_name": "PlanningStatus",
+                    "text_pass": true,
+                    "data_pass": true,
+                    "failed_text_indices": [],
+                    "failed_data_indices": [],
+                    "image_similaritiy": [],
+                    "expected_messages": [
+                        "{\n\t\"status\" : \"kPlanSearching\",\n\t\"timestamp\" : \"0\",\n\t\"tmq_header\" : \n\t{\n\t\t\"tmq_stamp\" : \"0\"\n\t}\n}",
+                        "{\n\t\"status\" : \"kPlanSuccessed\",\n\t\"timestamp\" : \"0\",\n\t\"tmq_header\" : \n\t{\n\t\t\"tmq_stamp\" : \"0\"\n\t}\n}"
+                    ],
+                    "output_messages": [
+                        "{\"tmq_header\":{\"tmq_stamp\":\"1671698844730\"},\"timestamp\":\"28111144152390\",\"status\":\"kPlanSearching\"}",
+                        "{\"tmq_header\":{\"tmq_stamp\":\"1671698844856\"},\"timestamp\":\"28111269950259\",\"status\":\"kPlanSuccessed\"}"
+                    ],
+                    "saved_images": []
+                },
+                {
+                    "channel_id": "30013",
+                    "topic_name": "TrajectoryFully",
+                    "text_pass": true,
+                    "data_pass": true,
+                    "failed_text_indices": [],
+                    "failed_data_indices": [],
+                    "image_similaritiy": [],
+                    "expected_messages": [
+                        "Start& End Point, Expected start: [ x: -0.0784531, y: 0.0595498, theta: 1.08506 ]\n<br/>Expected end: [ x: 0, y: -6.5, theta: 1.5708 ]\n<br/><br/>Expected Turn count: 1<br/><br/>"
+                    ],
+                    "output_messages": [
+                        "Current dtw value: 0<br/><br/><b>Pass, Pose Verify</b><br/>Expect track and actual track start& end point matched<br/>Start& End Point, Actual start: [ x: -0.0784531, y: 0.0595498, theta: 1.08506 ]\n<br/>Actual end: [ x: 0, y: -6.5, theta: 1.5708 ]\n<br/>Relation start: [ x: 0, y: 0, theta: 0 ]\n<br/>Relation end: [ x: 0, y: 0, theta: 0 ]\n<br/><br/><b>Pass, Turn Count Verify</b><br/>Actutal turn count 1 less than max turn count: 9, Passed<br/><br/><b>Pass, Turn Count Diff Verify</b><br/>Actual Turn count: 1 less than or equal to Expect Turn count: 1, pass <br/>Actual Turn count: 1<br/><br/><b>Pass, Turning Curve Rate</b><br/>Turning curves comparison successfully<br/><br/>"
+                    ],
+                    "saved_images": []
+                }
+            ]
+        },
+        {
+            "pass": true,
+            "text_pass": true,
+            "data_pass": true,
+            "descriptions": {
+                "Call Coverage": "",
+                "Calls": "",
+                "Control Flow Document": "https://spaces.telenav.com:8443/display/TC/Planning+-+Software+Detailed+Design",
+                "Control Flow Verification": "Pass",
+                "Data Flow Document": "https://spaces.telenav.com:8443/pages/viewpage.action?pageId=189015770",
+                "Data Flow Verification": "Pass",
+                "Description": "Verical Parking 45 degree Tail In",
+                "Design Document": "https://spaces.telenav.com:8443/display/TC/Planning+-+Software+Detailed+Design",
+                "JIRA ID": "XW-6513",
+                "Pass Criteria": "1, Output message's content and number are as expected.",
+                "Test Case ID": "6",
+                "Test Method": "Interface test and requirement test(3 TMQ interfaces simulation)"
+            },
+            "channels": [
+                {
+                    "channel_id": "30015",
+                    "topic_name": "PlanningStatus",
+                    "text_pass": true,
+                    "data_pass": true,
+                    "failed_text_indices": [],
+                    "failed_data_indices": [],
+                    "image_similaritiy": [],
+                    "expected_messages": [
+                        "{\n\t\"status\" : \"kPlanSearching\",\n\t\"timestamp\" : \"0\",\n\t\"tmq_header\" : \n\t{\n\t\t\"tmq_stamp\" : \"0\"\n\t}\n}",
+                        "{\n\t\"status\" : \"kPlanSuccessed\",\n\t\"timestamp\" : \"0\",\n\t\"tmq_header\" : \n\t{\n\t\t\"tmq_stamp\" : \"0\"\n\t}\n}"
+                    ],
+                    "output_messages": [
+                        "{\"tmq_header\":{\"tmq_stamp\":\"1671698856733\"},\"timestamp\":\"28123147397048\",\"status\":\"kPlanSearching\"}",
+                        "{\"tmq_header\":{\"tmq_stamp\":\"1671698856821\"},\"timestamp\":\"28123234988664\",\"status\":\"kPlanSuccessed\"}"
+                    ],
+                    "saved_images": []
+                },
+                {
+                    "channel_id": "30013",
+                    "topic_name": "TrajectoryFully",
+                    "text_pass": true,
+                    "data_pass": true,
+                    "failed_text_indices": [],
+                    "failed_data_indices": [],
+                    "image_similaritiy": [],
+                    "expected_messages": [
+                        "Start& End Point, Expected start: [ x: -0.0347471, y: 0.0347471, theta: 0.7854 ]\n<br/>Expected end: [ x: 0, y: -6.5, theta: 1.5708 ]\n<br/><br/>Expected Turn count: 1<br/><br/>"
+                    ],
+                    "output_messages": [
+                        "Current dtw value: 0<br/><br/><b>Pass, Pose Verify</b><br/>Expect track and actual track start& end point matched<br/>Start& End Point, Actual start: [ x: -0.0347471, y: 0.0347471, theta: 0.7854 ]\n<br/>Actual end: [ x: 0, y: -6.5, theta: 1.5708 ]\n<br/>Relation start: [ x: 0, y: 0, theta: 0 ]\n<br/>Relation end: [ x: 0, y: 0, theta: 0 ]\n<br/><br/><b>Pass, Turn Count Verify</b><br/>Actutal turn count 1 less than max turn count: 9, Passed<br/><br/><b>Pass, Turn Count Diff Verify</b><br/>Actual Turn count: 1 less than or equal to Expect Turn count: 1, pass <br/>Actual Turn count: 1<br/><br/><b>Pass, Turning Curve Rate</b><br/>Turning curves comparison successfully<br/><br/>"
+                    ],
+                    "saved_images": []
+                }
+            ]
+        },
+        {
+            "pass": false,
+            "text_pass": false,
+            "data_pass": true,
+            "descriptions": {
+                "Call Coverage": "",
+                "Calls": "",
+                "Control Flow Document": "https://spaces.telenav.com:8443/display/TC/Planning+-+Software+Detailed+Design",
+                "Control Flow Verification": "Pass",
+                "Data Flow Document": "https://spaces.telenav.com:8443/pages/viewpage.action?pageId=189015770",
+                "Data Flow Verification": "Pass",
+                "Description": "Horizontal Parking Two Parking lots Less than 5 meters",
+                "Design Document": "https://spaces.telenav.com:8443/display/TC/Planning+-+Software+Detailed+Design",
+                "JIRA ID": "XW-6513",
+                "Pass Criteria": "1, Output message's content and number are as expected.",
+                "Test Case ID": "8",
+                "Test Method": "Interface test and requirement test(3 TMQ interfaces simulation)"
+            },
+            "channels": [
+                {
+                    "channel_id": "30015",
+                    "topic_name": "PlanningStatus",
+                    "text_pass": true,
+                    "data_pass": true,
+                    "failed_text_indices": [],
+                    "failed_data_indices": [],
+                    "image_similaritiy": [],
+                    "expected_messages": [
+                        "{\n\t\"status\" : \"kPlanSearching\",\n\t\"timestamp\" : \"0\",\n\t\"tmq_header\" : \n\t{\n\t\t\"tmq_stamp\" : \"0\"\n\t}\n}",
+                        "{\n\t\"status\" : \"kPlanSuccessed\",\n\t\"timestamp\" : \"0\",\n\t\"tmq_header\" : \n\t{\n\t\t\"tmq_stamp\" : \"0\"\n\t}\n}"
+                    ],
+                    "output_messages": [
+                        "{\"tmq_header\":{\"tmq_stamp\":\"1671698868735\"},\"timestamp\":\"28135149506445\",\"status\":\"kPlanSearching\"}",
+                        "{\"tmq_header\":{\"tmq_stamp\":\"1671698870906\"},\"timestamp\":\"28137320762703\",\"status\":\"kPlanSuccessed\"}"
+                    ],
+                    "saved_images": []
+                },
+                {
+                    "channel_id": "30013",
+                    "topic_name": "TrajectoryFully",
+                    "text_pass": false,
+                    "data_pass": true,
+                    "failed_text_indices": [
+                        0
+                    ],
+                    "failed_data_indices": [],
+                    "image_similaritiy": [],
+                    "expected_messages": [
+                        "<b>Track 0:</b> <br/><br/>Start& End Point, Expected start: [ x: 0, y: 0.0278082, theta: 3.14159 ]\n<br/>Expected end: [ x: 5.39621, y: 4.23301, theta: -3.14159 ]\n<br/><br/>Expected Turn count: 2<br/><br/>"
+                    ],
+                    "output_messages": [
+                        "<b>Track 0:</b> <br/><br/>Current dtw value: 9.40354<br/><br/><b>Pass, Pose Verify</b><br/>Expect track and actual track start& end point matched<br/>Start& End Point, Actual start: [ x: 0, y: 0.031105, theta: 3.14159 ]\n<br/>Actual end: [ x: 5.39621, y: 4.23301, theta: -3.14159 ]\n<br/>Relation start: [ x: 4.97811e-10, y: -0.00329685, theta: 0 ]\n<br/>Relation end: [ x: 0, y: 0, theta: 0 ]\n<br/><br/><b>Pass, Turn Count Verify</b><br/>Actutal turn count 4 less than max turn count: 9, Passed<br/><br/><b>Fail, Turn Count Diff Verify</b><br/>Actual Turn count: 4 greater that Expect Turn count: 2, not acceptable <br/>Actual Turn count: 4<br/><br/><b>Pass, Turning Curve Rate</b><br/>Turning curves comparison successfully<br/><br/><br/>Actual Message: <br/>{\"tmq_header\":{\"tmq_stamp\":\"1671698870903\"},\"timestamp\":\"1671698870900725360\",\"trajectory_type\":\"kTrajectory\",\"waypoints\":[{\"pose\":{\"x\":0,\"y\":0.0311050415,\"theta\":3.1415925},\"direction\":\"kForward\",\"speed\":0.3},{\"pose\":{\"x\":-0.494431496,\"y\":0.0585832596,\"theta\":3.03055763},\"direction\":\"kForward\",\"speed\":0.3},{\"pose\":{\"x\":-0.79124403,\"y\":0.101811409,\"theta\":2.96337891},\"direction\":\"kForward\",\"speed\":0.3},{\"pose\":{\"x\":-1.08562231,\"y\":0.159557343,\"theta\":2.93240047},\"direction\":\"kForward\",\"speed\":0.3},{\"pose\":{\"x\":-1.37676954,\"y\":0.231664658,\"theta\":2.86522174},\"direction\":\"kForward\",\"speed\":0.3},{\"pose\":{\"x\":-1.66407204,\"y\":0.31798172,\"theta\":2.8342433},\"direction\":\"kForward\",\"speed\":0.3},{\"pose\":{\"x\":-1.95001364,\"y\":0.408741951,\"theta\":2.8342433},\"direction\":\"kForward\",\"speed\":0.3},{\"pose\":{\"x\":-2.23450422,\"y\":0.50391674,\"theta\":2.80326486},\"direction\":\"kForward\",\"speed\":0.3},{\"pose\":{\"x\":-2.51591063,\"y\":0.60785675,\"theta\":2.77228642},\"direction\":\"kForward\",\"speed\":0.3},{\"pose\":{\"x\":-2.94303846,\"y\":0.74889183,\"theta\":2.8730545},\"direction\":\"kForward\",\"speed\":0.3},{\"pose\":{\"x\":-2.94303846,\"y\":0.74889183,\"theta\":2.8730545},\"direction\":\"kBackward\",\"speed\":0.3},{\"pose\":{\"x\":-2.50388956,\"y\":0.651540756,\"theta\":2.97382259},\"direction\":\"kBackward\",\"speed\":0.3},{\"pose\":{\"x\":-2.05717564,\"y\":0.598860741,\"theta\":3.07459068},\"direction\":\"kBackward\",\"speed\":0.3},{\"pose\":{\"x\":-1.75739908,\"y\":0.588840485,\"theta\":-3.14141583},\"direction\":\"kBackward\",\"speed\":0.3},{\"pose\":{\"x\":-1.45762634,\"y\":0.598966599,\"theta\":-3.07423711},\"direction\":\"kBackward\",\"speed\":0.3},{\"pose\":{\"x\":-1.15920973,\"y\":0.629192352,\"theta\":-3.00705838},\"direction\":\"kBackward\",\"speed\":0.3},{\"pose\":{\"x\":-0.86349535,\"y\":0.679383278,\"theta\":-2.93987966},\"direction\":\"kBackward\",\"speed\":0.3},{\"pose\":{\"x\":-0.57055521,\"y\":0.744030952,\"theta\":-2.90890121},\"direction\":\"kBackward\",\"speed\":0.3},{\"pose\":{\"x\":-0.27864027,\"y\":0.813210487,\"theta\":-2.90890121},\"direction\":\"kBackward\",\"speed\":0.3},{\"pose\":{\"x\":0.0121569633,\"y\":0.886899948,\"theta\":-2.87792277},\"direction\":\"kBackward\",\"speed\":0.3},{\"pose\":{\"x\":0.443724155,\"y\":1.01423168,\"theta\":-2.83145523},\"direction\":\"kBackward\",\"speed\":0.3},{\"pose\":{\"x\":0.872255802,\"y\":1.15156651,\"theta\":-2.83145523},\"direction\":\"kBackward\",\"speed\":0.3},{\"pose\":{\"x\":1.29314852,\"y\":1.31024265,\"theta\":-2.73068714},\"direction\":\"kBackward\",\"speed\":0.3},{\"pose\":{\"x\":1.69594431,\"y\":1.51045418,\"theta\":-2.62991905},\"direction\":\"kBackward\",\"speed\":0.3},{\"pose\":{\"x\":2.08831072,\"y\":1.73079109,\"theta\":-2.62991905},\"direction\":\"kBackward\",\"speed\":0.3},{\"pose\":{\"x\":2.47541761,\"y\":1.96016312,\"theta\":-2.58345151},\"direction\":\"kBackward\",\"speed\":0.3},{\"pose\":{\"x\":2.8444829,\"y\":2.21730042,\"theta\":-2.48268342},\"direction\":\"kBackward\",\"speed\":0.3},{\"pose\":{\"x\":3.18580866,\"y\":2.51025963,\"theta\":-2.38191533},\"direction\":\"kBackward\",\"speed\":0.3},{\"pose\":{\"x\":3.50476885,\"y\":2.82763577,\"theta\":-2.33544779},\"direction\":\"kBackward\",\"speed\":0.3},{\"pose\":{\"x\":3.70502901,\"y\":3.05093384,\"theta\":-2.26826906},\"direction\":\"kBackward\",\"speed\":0.3},{\"pose\":{\"x\":3.90529013,\"y\":3.27423096,\"theta\":-2.33544779},\"direction\":\"kBackward\",\"speed\":0.3},{\"pose\":{\"x\":4.12008905,\"y\":3.4835825,\"theta\":-2.40262651},\"direction\":\"kBackward\",\"speed\":0.3},{\"pose\":{\"x\":4.34845686,\"y\":3.67804193,\"theta\":-2.46980524},\"direction\":\"kBackward\",\"speed\":0.3},{\"pose\":{\"x\":4.58936262,\"y\":3.85673332,\"theta\":-2.53698397},\"direction\":\"kBackward\",\"speed\":0.3},{\"pose\":{\"x\":4.84172106,\"y\":4.01885,\"theta\":-2.60416269},\"direction\":\"kBackward\",\"speed\":0.3},{\"pose\":{\"x\":5.10439157,\"y\":4.16366,\"theta\":-2.67134142},\"direction\":\"kBackward\",\"speed\":0.3},{\"pose\":{\"x\":5.37619162,\"y\":4.29051161,\"theta\":-2.73852015},\"direction\":\"kBackward\",\"speed\":0.3},{\"pose\":{\"x\":5.37619162,\"y\":4.29051161,\"theta\":-2.73852015},\"direction\":\"kForward\",\"speed\":0.3},{\"pose\":{\"x\":5.09649038,\"y\":4.18219185,\"theta\":-2.80569887},\"direction\":\"kForward\",\"speed\":0.3},{\"pose\":{\"x\":4.81014776,\"y\":4.09289265,\"theta\":-2.8728776},\"direction\":\"kForward\",\"speed\":0.3},{\"pose\":{\"x\":4.81014776,\"y\":4.09289265,\"theta\":-2.8728776},\"direction\":\"kBackward\",\"speed\":0.3},{\"pose\":{\"x\":5.10183859,\"y\":4.16276932,\"theta\":-2.94005632},\"direction\":\"kBackward\",\"speed\":0.3},{\"pose\":{\"x\":5.3975625,\"y\":4.21290779,\"theta\":-3.00723505},\"direction\":\"kBackward\",\"speed\":0.3},{\"pose\":{\"x\":5.69598436,\"y\":4.24308157,\"theta\":-3.07441378},\"direction\":\"kBackward\",\"speed\":0.3},{\"pose\":{\"x\":5.69598436,\"y\":4.24308157,\"theta\":-3.07441378},\"direction\":\"kForward\",\"speed\":0.3},{\"pose\":{\"x\":5.39621,\"y\":4.23300838,\"theta\":-3.1415925},\"direction\":\"kForward\",\"speed\":0.3}]}<br/><br/><br/>Expect Message: <br/>{\n\t\"timestamp\" : \"1671453441547441125\",\n\t\"tmq_header\" : \n\t{\n\t\t\"tmq_stamp\" : \"1671453441548\"\n\t},\n\t\"trajectory_type\" : \"kTrajectory\",\n\t\"waypoints\" : \n\t[\n\t\t{\n\t\t\t\"direction\" : \"kForward\",\n\t\t\t\"pose\" : \n\t\t\t{\n\t\t\t\t\"theta\" : 3.1415924999999998,\n\t\t\t\t\"x\" : 0,\n\t\t\t\t\"y\" : 0.027808189399999999\n\t\t\t},\n\t\t\t\"speed\" : 0.29999999999999999\n\t\t},\n\t\t{\n\t\t\t\"direction\" : \"kForward\",\n\t\t\t\"pose\" : \n\t\t\t{\n\t\t\t\t\"theta\" : 3.0434358100000001,\n\t\t\t\t\"x\" : -0.46312856699999999,\n\t\t\t\t\"y\" : 0.050556182900000003\n\t\t\t},\n\t\t\t\"speed\" : 0.29999999999999999\n\t\t},\n\t\t{\n\t\t\t\"direction\" : \"kForward\",\n\t\t\t\"pose\" : \n\t\t\t{\n\t\t\t\t\"theta\" : 3.0124573699999999,\n\t\t\t\t\"x\" : -0.76118230799999997,\n\t\t\t\t\"y\" : 0.084575653099999995\n\t\t\t},\n\t\t\t\"speed\" : 0.29999999999999999\n\t\t},\n\t\t{\n\t\t\t\"direction\" : \"kForward\",\n\t\t\t\"pose\" : \n\t\t\t{\n\t\t\t\t\"theta\" : 2.9452786400000002,\n\t\t\t\t\"x\" : -1.0571637199999999,\n\t\t\t\t\"y\" : 0.133169174\n\t\t\t},\n\t\t\t\"speed\" : 0.29999999999999999\n\t\t},\n\t\t{\n\t\t\t\"direction\" : \"kForward\",\n\t\t\t\"pose\" : \n\t\t\t{\n\t\t\t\t\"theta\" : 2.8780999999999999,\n\t\t\t\t\"x\" : -1.3492155100000001,\n\t\t\t\t\"y\" : 0.20152187299999999\n\t\t\t},\n\t\t\t\"speed\" : 0.29999999999999999\n\t\t},\n\t\t{\n\t\t\t\"direction\" : \"kForward\",\n\t\t\t\"pose\" : \n\t\t\t{\n\t\t\t\t\"theta\" : 2.8109211900000002,\n\t\t\t\t\"x\" : -1.63601971,\n\t\t\t\t\"y\" : 0.28932476000000001\n\t\t\t},\n\t\t\t\"speed\" : 0.29999999999999999\n\t\t},\n\t\t{\n\t\t\t\"direction\" : \"kForward\",\n\t\t\t\"pose\" : \n\t\t\t{\n\t\t\t\t\"theta\" : 2.77994275,\n\t\t\t\t\"x\" : -1.9182143199999999,\n\t\t\t\t\"y\" : 0.39110755899999999\n\t\t\t},\n\t\t\t\"speed\" : 0.29999999999999999\n\t\t},\n\t\t{\n\t\t\t\"direction\" : \"kForward\",\n\t\t\t\"pose\" : \n\t\t\t{\n\t\t\t\t\"theta\" : 2.8471214800000002,\n\t\t\t\t\"x\" : -2.2021617899999999,\n\t\t\t\t\"y\" : 0.48775291399999998\n\t\t\t},\n\t\t\t\"speed\" : 0.29999999999999999\n\t\t},\n\t\t{\n\t\t\t\"direction\" : \"kForward\",\n\t\t\t\"pose\" : \n\t\t\t{\n\t\t\t\t\"theta\" : 2.9143002,\n\t\t\t\t\"x\" : -2.49195623,\n\t\t\t\t\"y\" : 0.56511878999999998\n\t\t\t},\n\t\t\t\"speed\" : 0.29999999999999999\n\t\t},\n\t\t{\n\t\t\t\"direction\" : \"kForward\",\n\t\t\t\"pose\" : \n\t\t\t{\n\t\t\t\t\"theta\" : 3.0150682899999999,\n\t\t\t\t\"x\" : -2.93474579,\n\t\t\t\t\"y\" : 0.64427948000000002\n\t\t\t},\n\t\t\t\"speed\" : 0.29999999999999999\n\t\t},\n\t\t{\n\t\t\t\"direction\" : \"kBackward\",\n\t\t\t\"pose\" : \n\t\t\t{\n\t\t\t\t\"theta\" : 3.0150682899999999,\n\t\t\t\t\"x\" : -2.93474579,\n\t\t\t\t\"y\" : 0.64427948000000002\n\t\t\t},\n\t\t\t\"speed\" : 0.29999999999999999\n\t\t},\n\t\t{\n\t\t\t\"direction\" : \"kBackward\",\n\t\t\t\"pose\" : \n\t\t\t{\n\t\t\t\t\"theta\" : 3.1158363800000002,\n\t\t\t\t\"x\" : -2.4862394299999999,\n\t\t\t\t\"y\" : 0.61006355300000004\n\t\t\t},\n\t\t\t\"speed\" : 0.29999999999999999\n\t\t},\n\t\t{\n\t\t\t\"direction\" : \"kBackward\",\n\t\t\t\"pose\" : \n\t\t\t{\n\t\t\t\t\"theta\" : -3.1208813200000001,\n\t\t\t\t\"x\" : -2.0362815900000002,\n\t\t\t\t\"y\" : 0.60892868\n\t\t\t},\n\t\t\t\"speed\" : 0.29999999999999999\n\t\t},\n\t\t{\n\t\t\t\"direction\" : \"kBackward\",\n\t\t\t\"pose\" : \n\t\t\t{\n\t\t\t\t\"theta\" : 3.0951252,\n\t\t\t\t\"x\" : -1.7363629300000001,\n\t\t\t\t\"y\" : 0.60506534599999995\n\t\t\t},\n\t\t\t\"speed\" : 0.29999999999999999\n\t\t},\n\t\t{\n\t\t\t\"direction\" : \"kBackward\",\n\t\t\t\"pose\" : \n\t\t\t{\n\t\t\t\t\"theta\" : 3.1261036400000002,\n\t\t\t\t\"x\" : -1.4365181899999999,\n\t\t\t\t\"y\" : 0.59577369700000005\n\t\t\t},\n\t\t\t\"speed\" : 0.29999999999999999\n\t\t},\n\t\t{\n\t\t\t\"direction\" : \"kBackward\",\n\t\t\t\"pose\" : \n\t\t\t{\n\t\t\t\t\"theta\" : -3.12610316,\n\t\t\t\t\"x\" : -1.1365294500000001,\n\t\t\t\t\"y\" : 0.59577369700000005\n\t\t\t},\n\t\t\t\"speed\" : 0.29999999999999999\n\t\t},\n\t\t{\n\t\t\t\"direction\" : \"kBackward\",\n\t\t\t\"pose\" : \n\t\t\t{\n\t\t\t\t\"theta\" : -3.0589244400000002,\n\t\t\t\t\"x\" : -0.83694696400000002,\n\t\t\t\t\"y\" : 0.61048889200000001\n\t\t\t},\n\t\t\t\"speed\" : 0.29999999999999999\n\t\t},\n\t\t{\n\t\t\t\"direction\" : \"kBackward\",\n\t\t\t\"pose\" : \n\t\t\t{\n\t\t\t\t\"theta\" : -2.99174571,\n\t\t\t\t\"x\" : -0.53902769100000003,\n\t\t\t\t\"y\" : 0.64528179200000002\n\t\t\t},\n\t\t\t\"speed\" : 0.29999999999999999\n\t\t},\n\t\t{\n\t\t\t\"direction\" : \"kBackward\",\n\t\t\t\"pose\" : \n\t\t\t{\n\t\t\t\t\"theta\" : -2.9245669799999998,\n\t\t\t\t\"x\" : -0.24411630600000001,\n\t\t\t\t\"y\" : 0.69999408699999999\n\t\t\t},\n\t\t\t\"speed\" : 0.29999999999999999\n\t\t},\n\t\t{\n\t\t\t\"direction\" : \"kBackward\",\n\t\t\t\"pose\" : \n\t\t\t{\n\t\t\t\t\"theta\" : -2.9555454299999999,\n\t\t\t\t\"x\" : 0.0498008728,\n\t\t\t\t\"y\" : 0.76004409799999995\n\t\t\t},\n\t\t\t\"speed\" : 0.29999999999999999\n\t\t},\n\t\t{\n\t\t\t\"direction\" : \"kBackward\",\n\t\t\t\"pose\" : \n\t\t\t{\n\t\t\t\t\"theta\" : -2.8883667000000002,\n\t\t\t\t\"x\" : 0.34253930999999999,\n\t\t\t\t\"y\" : 0.82539463000000002\n\t\t\t},\n\t\t\t\"speed\" : 0.29999999999999999\n\t\t},\n\t\t{\n\t\t\t\"direction\" : \"kBackward\",\n\t\t\t\"pose\" : \n\t\t\t{\n\t\t\t\t\"theta\" : -2.9193451399999999,\n\t\t\t\t\"x\" : 0.63408994699999999,\n\t\t\t\t\"y\" : 0.89604377700000004\n\t\t\t},\n\t\t\t\"speed\" : 0.29999999999999999\n\t\t},\n\t\t{\n\t\t\t\"direction\" : \"kBackward\",\n\t\t\t\"pose\" : \n\t\t\t{\n\t\t\t\t\"theta\" : -2.8521664100000002,\n\t\t\t\t\"x\" : 0.92427110700000004,\n\t\t\t\t\"y\" : 0.97194576300000002\n\t\t\t},\n\t\t\t\"speed\" : 0.29999999999999999\n\t\t},\n\t\t{\n\t\t\t\"direction\" : \"kBackward\",\n\t\t\t\"pose\" : \n\t\t\t{\n\t\t\t\t\"theta\" : -2.8056988700000001,\n\t\t\t\t\"x\" : 1.3524155600000001,\n\t\t\t\t\"y\" : 1.11034966\n\t\t\t},\n\t\t\t\"speed\" : 0.29999999999999999\n\t\t},\n\t\t{\n\t\t\t\"direction\" : \"kBackward\",\n\t\t\t\"pose\" : \n\t\t\t{\n\t\t\t\t\"theta\" : -2.75923133,\n\t\t\t\t\"x\" : 1.77366972,\n\t\t\t\t\"y\" : 1.26849079\n\t\t\t},\n\t\t\t\"speed\" : 0.29999999999999999\n\t\t},\n\t\t{\n\t\t\t\"direction\" : \"kBackward\",\n\t\t\t\"pose\" : \n\t\t\t{\n\t\t\t\t\"theta\" : -2.6584632400000001,\n\t\t\t\t\"x\" : 2.1820149400000002,\n\t\t\t\t\"y\" : 1.45712471\n\t\t\t},\n\t\t\t\"speed\" : 0.29999999999999999\n\t\t},\n\t\t{\n\t\t\t\"direction\" : \"kBackward\",\n\t\t\t\"pose\" : \n\t\t\t{\n\t\t\t\t\"theta\" : -2.5576951499999998,\n\t\t\t\t\"x\" : 2.5693135300000001,\n\t\t\t\t\"y\" : 1.68588066\n\t\t\t},\n\t\t\t\"speed\" : 0.29999999999999999\n\t\t},\n\t\t{\n\t\t\t\"direction\" : \"kBackward\",\n\t\t\t\"pose\" : \n\t\t\t{\n\t\t\t\t\"theta\" : -2.4569270599999999,\n\t\t\t\t\"x\" : 2.93163347,\n\t\t\t\t\"y\" : 1.95243835\n\t\t\t},\n\t\t\t\"speed\" : 0.29999999999999999\n\t\t},\n\t\t{\n\t\t\t\"direction\" : \"kBackward\",\n\t\t\t\"pose\" : \n\t\t\t{\n\t\t\t\t\"theta\" : -2.3561589700000001,\n\t\t\t\t\"x\" : 3.2653012299999999,\n\t\t\t\t\"y\" : 2.25409126\n\t\t\t},\n\t\t\t\"speed\" : 0.29999999999999999\n\t\t},\n\t\t{\n\t\t\t\"direction\" : \"kBackward\",\n\t\t\t\"pose\" : \n\t\t\t{\n\t\t\t\t\"theta\" : -2.2553908800000002,\n\t\t\t\t\"x\" : 3.5669312500000001,\n\t\t\t\t\"y\" : 2.58778095\n\t\t\t},\n\t\t\t\"speed\" : 0.29999999999999999\n\t\t},\n\t\t{\n\t\t\t\"direction\" : \"kBackward\",\n\t\t\t\"pose\" : \n\t\t\t{\n\t\t\t\t\"theta\" : -2.3018584299999998,\n\t\t\t\t\"x\" : 3.8594880100000002,\n\t\t\t\t\"y\" : 2.92964935\n\t\t\t},\n\t\t\t\"speed\" : 0.29999999999999999\n\t\t},\n\t\t{\n\t\t\t\"direction\" : \"kBackward\",\n\t\t\t\"pose\" : \n\t\t\t{\n\t\t\t\t\"theta\" : -2.4026265100000002,\n\t\t\t\t\"x\" : 4.1762929,\n\t\t\t\t\"y\" : 3.2489681199999998\n\t\t\t},\n\t\t\t\"speed\" : 0.29999999999999999\n\t\t},\n\t\t{\n\t\t\t\"direction\" : \"kBackward\",\n\t\t\t\"pose\" : \n\t\t\t{\n\t\t\t\t\"theta\" : -2.4698052399999999,\n\t\t\t\t\"x\" : 4.4046607,\n\t\t\t\t\"y\" : 3.4434275599999999\n\t\t\t},\n\t\t\t\"speed\" : 0.29999999999999999\n\t\t},\n\t\t{\n\t\t\t\"direction\" : \"kBackward\",\n\t\t\t\"pose\" : \n\t\t\t{\n\t\t\t\t\"theta\" : -2.5369839700000001,\n\t\t\t\t\"x\" : 4.6455664600000004,\n\t\t\t\t\"y\" : 3.6221189499999999\n\t\t\t},\n\t\t\t\"speed\" : 0.29999999999999999\n\t\t},\n\t\t{\n\t\t\t\"direction\" : \"kBackward\",\n\t\t\t\"pose\" : \n\t\t\t{\n\t\t\t\t\"theta\" : -2.6041626899999999,\n\t\t\t\t\"x\" : 4.8979248999999996,\n\t\t\t\t\"y\" : 3.78423548\n\t\t\t},\n\t\t\t\"speed\" : 0.29999999999999999\n\t\t},\n\t\t{\n\t\t\t\"direction\" : \"kBackward\",\n\t\t\t\"pose\" : \n\t\t\t{\n\t\t\t\t\"theta\" : -2.6713414200000001,\n\t\t\t\t\"x\" : 5.1605954199999999,\n\t\t\t\t\"y\" : 3.9290456800000002\n\t\t\t},\n\t\t\t\"speed\" : 0.29999999999999999\n\t\t},\n\t\t{\n\t\t\t\"direction\" : \"kBackward\",\n\t\t\t\"pose\" : \n\t\t\t{\n\t\t\t\t\"theta\" : -2.7385201499999998,\n\t\t\t\t\"x\" : 5.4323954600000004,\n\t\t\t\t\"y\" : 4.0558972400000002\n\t\t\t},\n\t\t\t\"speed\" : 0.29999999999999999\n\t\t},\n\t\t{\n\t\t\t\"direction\" : \"kBackward\",\n\t\t\t\"pose\" : \n\t\t\t{\n\t\t\t\t\"theta\" : -2.8056988700000001,\n\t\t\t\t\"x\" : 5.7120966900000001,\n\t\t\t\t\"y\" : 4.1642169999999998\n\t\t\t},\n\t\t\t\"speed\" : 0.29999999999999999\n\t\t},\n\t\t{\n\t\t\t\"direction\" : \"kBackward\",\n\t\t\t\"pose\" : \n\t\t\t{\n\t\t\t\t\"theta\" : -2.8728775999999998,\n\t\t\t\t\"x\" : 5.9984393100000002,\n\t\t\t\t\"y\" : 4.2535162\n\t\t\t},\n\t\t\t\"speed\" : 0.29999999999999999\n\t\t},\n\t\t{\n\t\t\t\"direction\" : \"kBackward\",\n\t\t\t\"pose\" : \n\t\t\t{\n\t\t\t\t\"theta\" : -2.9400563200000001,\n\t\t\t\t\"x\" : 6.2901300000000004,\n\t\t\t\t\"y\" : 4.32339334\n\t\t\t},\n\t\t\t\"speed\" : 0.29999999999999999\n\t\t},\n\t\t{\n\t\t\t\"direction\" : \"kForward\",\n\t\t\t\"pose\" : \n\t\t\t{\n\t\t\t\t\"theta\" : -2.9400563200000001,\n\t\t\t\t\"x\" : 6.2901300000000004,\n\t\t\t\t\"y\" : 4.32339334\n\t\t\t},\n\t\t\t\"speed\" : 0.29999999999999999\n\t\t},\n\t\t{\n\t\t\t\"direction\" : \"kForward\",\n\t\t\t\"pose\" : \n\t\t\t{\n\t\t\t\t\"theta\" : -3.0072350499999998,\n\t\t\t\t\"x\" : 5.9944062200000001,\n\t\t\t\t\"y\" : 4.2732548699999997\n\t\t\t},\n\t\t\t\"speed\" : 0.29999999999999999\n\t\t},\n\t\t{\n\t\t\t\"direction\" : \"kForward\",\n\t\t\t\"pose\" : \n\t\t\t{\n\t\t\t\t\"theta\" : -3.07441378,\n\t\t\t\t\"x\" : 5.6959843599999997,\n\t\t\t\t\"y\" : 4.2430815700000002\n\t\t\t},\n\t\t\t\"speed\" : 0.29999999999999999\n\t\t},\n\t\t{\n\t\t\t\"direction\" : \"kForward\",\n\t\t\t\"pose\" : \n\t\t\t{\n\t\t\t\t\"theta\" : -3.1415924999999998,\n\t\t\t\t\"x\" : 5.39621,\n\t\t\t\t\"y\" : 4.2330083800000002\n\t\t\t},\n\t\t\t\"speed\" : 0.29999999999999999\n\t\t}\n\t]\n}<br/><br/>"
+                    ],
+                    "saved_images": [],
+                    "car_loc": {
+                        "x": 0,
+                        "y": 0,
+                        "theta": 3.1415925
+                    },
+                    "parking_space": {
+                        "p0": {
+                            "x": 7.08871,
+                            "y": 3.03300858
+                        },
+                        "p1": {
+                            "x": 7.08871,
+                            "y": 5.43300867
+                        },
+                        "p2": {
+                            "x": 1.08870971,
+                            "y": 5.43300867
+                        },
+                        "p3": {
+                            "x": 1.08870971,
+                            "y": 3.03300858
+                        },
+                        "valid": true,
+                        "confidence": 0.9,
+                        "sensor_source": "kFromCamera",
+                        "timestamp": "1658227458725613094"
+                    },
+                    "plan_failed_reasons": [
+                        [
+                            "TurnCountDiffFailure"
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "pass": true,
+            "text_pass": true,
+            "data_pass": true,
+            "descriptions": {
+                "Call Coverage": "",
+                "Calls": "",
+                "Control Flow Document": "https://spaces.telenav.com:8443/display/TC/Planning+-+Software+Detailed+Design",
+                "Control Flow Verification": "Pass",
+                "Data Flow Document": "https://spaces.telenav.com:8443/pages/viewpage.action?pageId=189015770",
+                "Data Flow Verification": "Pass",
+                "Description": "Vertical Parking Two Parking lots Less than 5 meters",
+                "Design Document": "https://spaces.telenav.com:8443/display/TC/Planning+-+Software+Detailed+Design",
+                "JIRA ID": "XW-6513",
+                "Pass Criteria": "1, Output message's content and number are as expected.",
+                "Test Case ID": "9",
+                "Test Method": "Interface test and requirement test(3 TMQ interfaces simulation)"
+            },
+            "channels": [
+                {
+                    "channel_id": "30015",
+                    "topic_name": "PlanningStatus",
+                    "text_pass": true,
+                    "data_pass": true,
+                    "failed_text_indices": [],
+                    "failed_data_indices": [],
+                    "image_similaritiy": [],
+                    "expected_messages": [
+                        "{\n\t\"status\" : \"kPlanSearching\",\n\t\"timestamp\" : \"0\",\n\t\"tmq_header\" : \n\t{\n\t\t\"tmq_stamp\" : \"0\"\n\t}\n}",
+                        "{\n\t\"status\" : \"kPlanSuccessed\",\n\t\"timestamp\" : \"0\",\n\t\"tmq_header\" : \n\t{\n\t\t\"tmq_stamp\" : \"0\"\n\t}\n}"
+                    ],
+                    "output_messages": [
+                        "{\"tmq_header\":{\"tmq_stamp\":\"1671698880737\"},\"timestamp\":\"28147151864752\",\"status\":\"kPlanSearching\"}",
+                        "{\"tmq_header\":{\"tmq_stamp\":\"1671698880845\"},\"timestamp\":\"28147258935814\",\"status\":\"kPlanSuccessed\"}"
+                    ],
+                    "saved_images": []
+                },
+                {
+                    "channel_id": "30013",
+                    "topic_name": "TrajectoryFully",
+                    "text_pass": true,
+                    "data_pass": true,
+                    "failed_text_indices": [],
+                    "failed_data_indices": [],
+                    "image_similaritiy": [],
+                    "expected_messages": [
+                        "Start& End Point, Expected start: [ x: 0.0617471, y: 0.073328, theta: 0.0362704 ]\n<br/>Expected end: [ x: 2.97419, y: 6.83009, theta: -1.5708 ]\n<br/><br/>Expected Turn count: 1<br/><br/>"
+                    ],
+                    "output_messages": [
+                        "Current dtw value: 0<br/><br/><b>Pass, Pose Verify</b><br/>Expect track and actual track start& end point matched<br/>Start& End Point, Actual start: [ x: 0.0617471, y: 0.073328, theta: 0.0362704 ]\n<br/>Actual end: [ x: 2.97419, y: 6.83009, theta: -1.5708 ]\n<br/>Relation start: [ x: 0, y: 0, theta: 0 ]\n<br/>Relation end: [ x: 0, y: 0, theta: 0 ]\n<br/><br/><b>Pass, Turn Count Verify</b><br/>Actutal turn count 1 less than max turn count: 9, Passed<br/><br/><b>Pass, Turn Count Diff Verify</b><br/>Actual Turn count: 1 less than or equal to Expect Turn count: 1, pass <br/>Actual Turn count: 1<br/><br/><b>Pass, Turning Curve Rate</b><br/>Turning curves comparison successfully<br/><br/>"
+                    ],
+                    "saved_images": []
+                }
+            ]
+        },
+        {
+            "pass": true,
+            "text_pass": true,
+            "data_pass": true,
+            "descriptions": {
+                "Call Coverage": "",
+                "Calls": "",
+                "Control Flow Document": "https://spaces.telenav.com:8443/display/TC/Planning+-+Software+Detailed+Design",
+                "Control Flow Verification": "Pass",
+                "Data Flow Document": "https://spaces.telenav.com:8443/pages/viewpage.action?pageId=189015770",
+                "Data Flow Verification": "Pass",
+                "Description": "Angle Parking Two Parking lots Less than 5 meters",
+                "Design Document": "https://spaces.telenav.com:8443/display/TC/Planning+-+Software+Detailed+Design",
+                "JIRA ID": "XW-6513",
+                "Pass Criteria": "1, Output message's content and number are as expected.",
+                "Test Case ID": "10",
+                "Test Method": "Interface test and requirement test(3 TMQ interfaces simulation)"
+            },
+            "channels": [
+                {
+                    "channel_id": "30015",
+                    "topic_name": "PlanningStatus",
+                    "text_pass": true,
+                    "data_pass": true,
+                    "failed_text_indices": [],
+                    "failed_data_indices": [],
+                    "image_similaritiy": [],
+                    "expected_messages": [
+                        "{\n\t\"status\" : \"kPlanSearching\",\n\t\"timestamp\" : \"0\",\n\t\"tmq_header\" : \n\t{\n\t\t\"tmq_stamp\" : \"0\"\n\t}\n}",
+                        "{\n\t\"status\" : \"kPlanSuccessed\",\n\t\"timestamp\" : \"0\",\n\t\"tmq_header\" : \n\t{\n\t\t\"tmq_stamp\" : \"0\"\n\t}\n}"
+                    ],
+                    "output_messages": [
+                        "{\"tmq_header\":{\"tmq_stamp\":\"1671698892740\"},\"timestamp\":\"28159154212426\",\"status\":\"kPlanSearching\"}",
+                        "{\"tmq_header\":{\"tmq_stamp\":\"1671698896151\"},\"timestamp\":\"28162564898282\",\"status\":\"kPlanSuccessed\"}"
+                    ],
+                    "saved_images": []
+                },
+                {
+                    "channel_id": "30013",
+                    "topic_name": "TrajectoryFully",
+                    "text_pass": true,
+                    "data_pass": true,
+                    "failed_text_indices": [],
+                    "failed_data_indices": [],
+                    "image_similaritiy": [],
+                    "expected_messages": [
+                        "Start& End Point, Expected start: [ x: -0.191778, y: 0.0963945, theta: 0.0155957 ]\n<br/>Expected end: [ x: 9.01379, y: 6.44247, theta: -2.35619 ]\n<br/><br/>Expected Turn count: 5<br/><br/>"
+                    ],
+                    "output_messages": [
+                        "Current dtw value: 7.38924<br/><br/><b>Pass, Pose Verify</b><br/>Expect track and actual track start& end point matched<br/>Start& End Point, Actual start: [ x: -0.15087, y: -0.0145473, theta: 0.00776273 ]\n<br/>Actual end: [ x: 9.01379, y: 6.44247, theta: -2.35619 ]\n<br/>Relation start: [ x: 0.0391732, y: -0.111566, theta: -0.007833 ]\n<br/>Relation end: [ x: 0, y: 0, theta: 0 ]\n<br/><br/><b>Pass, Turn Count Verify</b><br/>Actutal turn count 5 less than max turn count: 9, Passed<br/><br/><b>Pass, Turn Count Diff Verify</b><br/>Actual Turn count: 5 less than or equal to Expect Turn count: 5, pass <br/>Actual Turn count: 5<br/><br/><b>Pass, Turning Curve Rate</b><br/>Turning curves comparison successfully<br/><br/>"
+                    ],
+                    "saved_images": []
+                }
+            ]
+        },
+        {
+            "pass": true,
+            "text_pass": true,
+            "data_pass": true,
+            "descriptions": {
+                "Call Coverage": "",
+                "Calls": "",
+                "Control Flow Document": "https://spaces.telenav.com:8443/display/TC/Planning+-+Software+Detailed+Design",
+                "Control Flow Verification": "Pass",
+                "Data Flow Document": "https://spaces.telenav.com:8443/pages/viewpage.action?pageId=189015770",
+                "Data Flow Verification": "Pass",
+                "Description": "Horizontal Parking Lots with USS data obstacle",
+                "Design Document": "https://spaces.telenav.com:8443/display/TC/Planning+-+Software+Detailed+Design",
+                "JIRA ID": "XW-6513",
+                "Pass Criteria": "1, Output message's content and number are as expected.",
+                "Test Case ID": "11",
+                "Test Method": "Interface test and requirement test(3 TMQ interfaces simulation)"
+            },
+            "channels": [
+                {
+                    "channel_id": "30015",
+                    "topic_name": "PlanningStatus",
+                    "text_pass": true,
+                    "data_pass": true,
+                    "failed_text_indices": [],
+                    "failed_data_indices": [],
+                    "image_similaritiy": [],
+                    "expected_messages": [
+                        "{\n\t\"status\" : \"kPlanSearching\",\n\t\"timestamp\" : \"0\",\n\t\"tmq_header\" : \n\t{\n\t\t\"tmq_stamp\" : \"0\"\n\t}\n}",
+                        "{\n\t\"status\" : \"kPlanFailed\",\n\t\"timestamp\" : \"1668070640235252987\",\n\t\"tmq_header\" : \n\t{\n\t\t\"tmq_stamp\" : \"1668070640235\"\n\t}\n}"
+                    ],
+                    "output_messages": [
+                        "{\"tmq_header\":{\"tmq_stamp\":\"1671698904742\"},\"timestamp\":\"28171156780404\",\"status\":\"kPlanSearching\"}",
+                        "{\"tmq_header\":{\"tmq_stamp\":\"1671698904761\"},\"timestamp\":\"28171175253459\",\"status\":\"kPlanFailed\"}"
+                    ],
+                    "saved_images": []
+                }
+            ]
+        },
+        {
+            "pass": true,
+            "text_pass": true,
+            "data_pass": true,
+            "descriptions": {
+                "Call Coverage": "",
+                "Calls": "",
+                "Control Flow Document": "https://spaces.telenav.com:8443/display/TC/Planning+-+Software+Detailed+Design",
+                "Control Flow Verification": "Pass",
+                "Data Flow Document": "https://spaces.telenav.com:8443/pages/viewpage.action?pageId=189015770",
+                "Data Flow Verification": "Pass",
+                "Description": "Vertical Parking Lots with USS data obstacle",
+                "Design Document": "https://spaces.telenav.com:8443/display/TC/Planning+-+Software+Detailed+Design",
+                "JIRA ID": "XW-6513",
+                "Pass Criteria": "1, Output message's content and number are as expected.",
+                "Test Case ID": "12",
+                "Test Method": "Interface test and requirement test(3 TMQ interfaces simulation)"
+            },
+            "channels": [
+                {
+                    "channel_id": "30015",
+                    "topic_name": "PlanningStatus",
+                    "text_pass": true,
+                    "data_pass": true,
+                    "failed_text_indices": [],
+                    "failed_data_indices": [],
+                    "image_similaritiy": [],
+                    "expected_messages": [
+                        "{\n\t\"status\" : \"kPlanSearching\",\n\t\"timestamp\" : \"0\",\n\t\"tmq_header\" : \n\t{\n\t\t\"tmq_stamp\" : \"0\"\n\t}\n}",
+                        "{\n\t\"status\" : \"kPlanFailed\",\n\t\"timestamp\" : \"1668070640235252987\",\n\t\"tmq_header\" : \n\t{\n\t\t\"tmq_stamp\" : \"1668070640235\"\n\t}\n}"
+                    ],
+                    "output_messages": [
+                        "{\"tmq_header\":{\"tmq_stamp\":\"1671698916746\"},\"timestamp\":\"28183160107447\",\"status\":\"kPlanSearching\"}",
+                        "{\"tmq_header\":{\"tmq_stamp\":\"1671698916752\"},\"timestamp\":\"28183166239420\",\"status\":\"kPlanFailed\"}"
+                    ],
+                    "saved_images": []
+                }
+            ]
+        },
+        {
+            "pass": true,
+            "text_pass": true,
+            "data_pass": true,
+            "descriptions": {
+                "Call Coverage": "",
+                "Calls": "",
+                "Control Flow Document": "https://spaces.telenav.com:8443/display/TC/Planning+-+Software+Detailed+Design",
+                "Control Flow Verification": "Pass",
+                "Data Flow Document": "https://spaces.telenav.com:8443/pages/viewpage.action?pageId=189015770",
+                "Data Flow Verification": "Pass",
+                "Description": "Angle Parking Lots with USS data obstacle",
+                "Design Document": "https://spaces.telenav.com:8443/display/TC/Planning+-+Software+Detailed+Design",
+                "JIRA ID": "XW-6513",
+                "Pass Criteria": "1, Output message's content and number are as expected.",
+                "Test Case ID": "13",
+                "Test Method": "Interface test and requirement test(3 TMQ interfaces simulation)"
+            },
+            "channels": [
+                {
+                    "channel_id": "30015",
+                    "topic_name": "PlanningStatus",
+                    "text_pass": true,
+                    "data_pass": true,
+                    "failed_text_indices": [],
+                    "failed_data_indices": [],
+                    "image_similaritiy": [],
+                    "expected_messages": [
+                        "{\n\t\"status\" : \"kPlanSearching\",\n\t\"timestamp\" : \"0\",\n\t\"tmq_header\" : \n\t{\n\t\t\"tmq_stamp\" : \"0\"\n\t}\n}",
+                        "{\n\t\"status\" : \"kPlanFailed\",\n\t\"timestamp\" : \"1668070640235252987\",\n\t\"tmq_header\" : \n\t{\n\t\t\"tmq_stamp\" : \"1668070640235\"\n\t}\n}"
+                    ],
+                    "output_messages": [
+                        "{\"tmq_header\":{\"tmq_stamp\":\"1671698928749\"},\"timestamp\":\"28195163340655\",\"status\":\"kPlanSearching\"}",
+                        "{\"tmq_header\":{\"tmq_stamp\":\"1671698928754\"},\"timestamp\":\"28195168021027\",\"status\":\"kPlanFailed\"}"
+                    ],
+                    "saved_images": []
+                }
+            ]
+        },
+        {
+            "pass": true,
+            "text_pass": true,
+            "data_pass": true,
+            "descriptions": {
+                "Call Coverage": "",
+                "Calls": "",
+                "Control Flow Document": "https://spaces.telenav.com:8443/display/TC/Planning+-+Software+Detailed+Design",
+                "Control Flow Verification": "Pass",
+                "Data Flow Document": "https://spaces.telenav.com:8443/pages/viewpage.action?pageId=189015770",
+                "Data Flow Verification": "Pass",
+                "Description": "Horizontal Parking Lots Uss MOD line",
+                "Design Document": "https://spaces.telenav.com:8443/display/TC/Planning+-+Software+Detailed+Design",
+                "JIRA ID": "XW-6513",
+                "Pass Criteria": "1, Output message's content and number are as expected.",
+                "Test Case ID": "14",
+                "Test Method": "Interface test and requirement test(3 TMQ interfaces simulation)"
+            },
+            "channels": [
+                {
+                    "channel_id": "30015",
+                    "topic_name": "PlanningStatus",
+                    "text_pass": true,
+                    "data_pass": true,
+                    "failed_text_indices": [],
+                    "failed_data_indices": [],
+                    "image_similaritiy": [],
+                    "expected_messages": [
+                        "{\n\t\"status\" : \"kPlanSearching\",\n\t\"timestamp\" : \"0\",\n\t\"tmq_header\" : \n\t{\n\t\t\"tmq_stamp\" : \"0\"\n\t}\n}",
+                        "{\n\t\"status\" : \"kPlanFailed\",\n\t\"timestamp\" : \"1668070640235252987\",\n\t\"tmq_header\" : \n\t{\n\t\t\"tmq_stamp\" : \"1668070640235\"\n\t}\n}"
+                    ],
+                    "output_messages": [
+                        "{\"tmq_header\":{\"tmq_stamp\":\"1671698940750\"},\"timestamp\":\"28207164124314\",\"status\":\"kPlanSearching\"}",
+                        "{\"tmq_header\":{\"tmq_stamp\":\"1671698940755\"},\"timestamp\":\"28207169190436\",\"status\":\"kPlanFailed\"}"
+                    ],
+                    "saved_images": []
+                }
+            ]
+        },
+        {
+            "pass": true,
+            "text_pass": true,
+            "data_pass": true,
+            "descriptions": {
+                "Call Coverage": "",
+                "Calls": "",
+                "Control Flow Document": "https://spaces.telenav.com:8443/display/TC/Planning+-+Software+Detailed+Design",
+                "Control Flow Verification": "Pass",
+                "Data Flow Document": "https://spaces.telenav.com:8443/pages/viewpage.action?pageId=189015770",
+                "Data Flow Verification": "Pass",
+                "Description": "Vertical Parking Lots MOD Line",
+                "Design Document": "https://spaces.telenav.com:8443/display/TC/Planning+-+Software+Detailed+Design",
+                "JIRA ID": "XW-6513",
+                "Pass Criteria": "1, Output message's content and number are as expected.",
+                "Test Case ID": "15",
+                "Test Method": "Interface test and requirement test(3 TMQ interfaces simulation)"
+            },
+            "channels": [
+                {
+                    "channel_id": "30015",
+                    "topic_name": "PlanningStatus",
+                    "text_pass": true,
+                    "data_pass": true,
+                    "failed_text_indices": [],
+                    "failed_data_indices": [],
+                    "image_similaritiy": [],
+                    "expected_messages": [
+                        "{\n\t\"status\" : \"kPlanSearching\",\n\t\"timestamp\" : \"0\",\n\t\"tmq_header\" : \n\t{\n\t\t\"tmq_stamp\" : \"0\"\n\t}\n}",
+                        "{\n\t\"status\" : \"kPlanFailed\",\n\t\"timestamp\" : \"1668070640235252987\",\n\t\"tmq_header\" : \n\t{\n\t\t\"tmq_stamp\" : \"1668070640235\"\n\t}\n}"
+                    ],
+                    "output_messages": [
+                        "{\"tmq_header\":{\"tmq_stamp\":\"1671698952753\"},\"timestamp\":\"28219166922161\",\"status\":\"kPlanSearching\"}",
+                        "{\"tmq_header\":{\"tmq_stamp\":\"1671698952757\"},\"timestamp\":\"28219171427666\",\"status\":\"kPlanFailed\"}"
+                    ],
+                    "saved_images": []
+                }
+            ]
+        },
+        {
+            "pass": true,
+            "text_pass": true,
+            "data_pass": true,
+            "descriptions": {
+                "Call Coverage": "",
+                "Calls": "",
+                "Control Flow Document": "https://spaces.telenav.com:8443/display/TC/Planning+-+Software+Detailed+Design",
+                "Control Flow Verification": "Pass",
+                "Data Flow Document": "https://spaces.telenav.com:8443/pages/viewpage.action?pageId=189015770",
+                "Data Flow Verification": "Pass",
+                "Description": "Angle Parking Lots MOD Line",
+                "Design Document": "https://spaces.telenav.com:8443/display/TC/Planning+-+Software+Detailed+Design",
+                "JIRA ID": "XW-6513",
+                "Pass Criteria": "1, Output message's content and number are as expected.",
+                "Test Case ID": "16",
+                "Test Method": "Interface test and requirement test(3 TMQ interfaces simulation)"
+            },
+            "channels": [
+                {
+                    "channel_id": "30015",
+                    "topic_name": "PlanningStatus",
+                    "text_pass": true,
+                    "data_pass": true,
+                    "failed_text_indices": [],
+                    "failed_data_indices": [],
+                    "image_similaritiy": [],
+                    "expected_messages": [
+                        "{\n\t\"status\" : \"kPlanSearching\",\n\t\"timestamp\" : \"0\",\n\t\"tmq_header\" : \n\t{\n\t\t\"tmq_stamp\" : \"0\"\n\t}\n}",
+                        "{\n\t\"status\" : \"kPlanFailed\",\n\t\"timestamp\" : \"1668070640235252987\",\n\t\"tmq_header\" : \n\t{\n\t\t\"tmq_stamp\" : \"1668070640235\"\n\t}\n}"
+                    ],
+                    "output_messages": [
+                        "{\"tmq_header\":{\"tmq_stamp\":\"1671698964754\"},\"timestamp\":\"28231168645458\",\"status\":\"kPlanSearching\"}",
+                        "{\"tmq_header\":{\"tmq_stamp\":\"1671698964759\"},\"timestamp\":\"28231172962271\",\"status\":\"kPlanFailed\"}"
+                    ],
+                    "saved_images": []
+                }
+            ]
+        },
+        {
+            "pass": true,
+            "text_pass": true,
+            "data_pass": true,
+            "descriptions": {
+                "Call Coverage": "",
+                "Calls": "",
+                "Control Flow Document": "https://spaces.telenav.com:8443/display/TC/Planning+-+Software+Detailed+Design",
+                "Control Flow Verification": "Pass",
+                "Data Flow Document": "https://spaces.telenav.com:8443/pages/viewpage.action?pageId=189015770",
+                "Data Flow Verification": "Pass",
+                "Description": "Horizontal Parking Lots MOD Triangle",
+                "Design Document": "https://spaces.telenav.com:8443/display/TC/Planning+-+Software+Detailed+Design",
+                "JIRA ID": "XW-6513",
+                "Pass Criteria": "1, Output message's content and number are as expected.",
+                "Test Case ID": "17",
+                "Test Method": "Interface test and requirement test(3 TMQ interfaces simulation)"
+            },
+            "channels": [
+                {
+                    "channel_id": "30015",
+                    "topic_name": "PlanningStatus",
+                    "text_pass": true,
+                    "data_pass": true,
+                    "failed_text_indices": [],
+                    "failed_data_indices": [],
+                    "image_similaritiy": [],
+                    "expected_messages": [
+                        "{\n\t\"status\" : \"kPlanSearching\",\n\t\"timestamp\" : \"0\",\n\t\"tmq_header\" : \n\t{\n\t\t\"tmq_stamp\" : \"0\"\n\t}\n}",
+                        "{\n\t\"status\" : \"kPlanFailed\",\n\t\"timestamp\" : \"1668070640235252987\",\n\t\"tmq_header\" : \n\t{\n\t\t\"tmq_stamp\" : \"1668070640235\"\n\t}\n}"
+                    ],
+                    "output_messages": [
+                        "{\"tmq_header\":{\"tmq_stamp\":\"1671698976757\"},\"timestamp\":\"28243171320422\",\"status\":\"kPlanSearching\"}",
+                        "{\"tmq_header\":{\"tmq_stamp\":\"1671698976761\"},\"timestamp\":\"28243175093397\",\"status\":\"kPlanFailed\"}"
+                    ],
+                    "saved_images": []
+                }
+            ]
+        },
+        {
+            "pass": true,
+            "text_pass": true,
+            "data_pass": true,
+            "descriptions": {
+                "Call Coverage": "",
+                "Calls": "",
+                "Control Flow Document": "https://spaces.telenav.com:8443/display/TC/Planning+-+Software+Detailed+Design",
+                "Control Flow Verification": "Pass",
+                "Data Flow Document": "https://spaces.telenav.com:8443/pages/viewpage.action?pageId=189015770",
+                "Data Flow Verification": "Pass",
+                "Description": "Vertical Parking Lots MOD Triangle",
+                "Design Document": "https://spaces.telenav.com:8443/display/TC/Planning+-+Software+Detailed+Design",
+                "JIRA ID": "XW-6513",
+                "Pass Criteria": "1, Output message's content and number are as expected.",
+                "Test Case ID": "18",
+                "Test Method": "Interface test and requirement test(3 TMQ interfaces simulation)"
+            },
+            "channels": [
+                {
+                    "channel_id": "30015",
+                    "topic_name": "PlanningStatus",
+                    "text_pass": true,
+                    "data_pass": true,
+                    "failed_text_indices": [],
+                    "failed_data_indices": [],
+                    "image_similaritiy": [],
+                    "expected_messages": [
+                        "{\n\t\"status\" : \"kPlanSearching\",\n\t\"timestamp\" : \"0\",\n\t\"tmq_header\" : \n\t{\n\t\t\"tmq_stamp\" : \"0\"\n\t}\n}",
+                        "{\n\t\"status\" : \"kPlanFailed\",\n\t\"timestamp\" : \"1668070640235252987\",\n\t\"tmq_header\" : \n\t{\n\t\t\"tmq_stamp\" : \"1668070640235\"\n\t}\n}"
+                    ],
+                    "output_messages": [
+                        "{\"tmq_header\":{\"tmq_stamp\":\"1671698988761\"},\"timestamp\":\"28255175380344\",\"status\":\"kPlanSearching\"}",
+                        "{\"tmq_header\":{\"tmq_stamp\":\"1671698988766\"},\"timestamp\":\"28255180197554\",\"status\":\"kPlanFailed\"}"
+                    ],
+                    "saved_images": []
+                }
+            ]
+        },
+        {
+            "pass": true,
+            "text_pass": true,
+            "data_pass": true,
+            "descriptions": {
+                "Call Coverage": "",
+                "Calls": "",
+                "Control Flow Document": "https://spaces.telenav.com:8443/display/TC/Planning+-+Software+Detailed+Design",
+                "Control Flow Verification": "Pass",
+                "Data Flow Document": "https://spaces.telenav.com:8443/pages/viewpage.action?pageId=189015770",
+                "Data Flow Verification": "Pass",
+                "Description": "Angle Parking Lots MOD Triangle",
+                "Design Document": "https://spaces.telenav.com:8443/display/TC/Planning+-+Software+Detailed+Design",
+                "JIRA ID": "XW-6513",
+                "Pass Criteria": "1, Output message's content and number are as expected.",
+                "Test Case ID": "19",
+                "Test Method": "Interface test and requirement test(3 TMQ interfaces simulation)"
+            },
+            "channels": [
+                {
+                    "channel_id": "30015",
+                    "topic_name": "PlanningStatus",
+                    "text_pass": true,
+                    "data_pass": true,
+                    "failed_text_indices": [],
+                    "failed_data_indices": [],
+                    "image_similaritiy": [],
+                    "expected_messages": [
+                        "{\n\t\"status\" : \"kPlanSearching\",\n\t\"timestamp\" : \"0\",\n\t\"tmq_header\" : \n\t{\n\t\t\"tmq_stamp\" : \"0\"\n\t}\n}",
+                        "{\n\t\"status\" : \"kPlanFailed\",\n\t\"timestamp\" : \"1668070640235252987\",\n\t\"tmq_header\" : \n\t{\n\t\t\"tmq_stamp\" : \"1668070640235\"\n\t}\n}"
+                    ],
+                    "output_messages": [
+                        "{\"tmq_header\":{\"tmq_stamp\":\"1671699000764\"},\"timestamp\":\"28267178399649\",\"status\":\"kPlanSearching\"}",
+                        "{\"tmq_header\":{\"tmq_stamp\":\"1671699000769\"},\"timestamp\":\"28267182921245\",\"status\":\"kPlanFailed\"}"
+                    ],
+                    "saved_images": []
+                }
+            ]
+        },
+        {
+            "pass": true,
+            "text_pass": true,
+            "data_pass": true,
+            "descriptions": {
+                "Call Coverage": "",
+                "Calls": "",
+                "Control Flow Document": "https://spaces.telenav.com:8443/display/TC/Planning+-+Software+Detailed+Design",
+                "Control Flow Verification": "Pass",
+                "Data Flow Document": "https://spaces.telenav.com:8443/pages/viewpage.action?pageId=189015770",
+                "Data Flow Verification": "Pass",
+                "Description": "Horizontal Parking Lots MOD Rectangle",
+                "Design Document": "https://spaces.telenav.com:8443/display/TC/Planning+-+Software+Detailed+Design",
+                "JIRA ID": "XW-6513",
+                "Pass Criteria": "1, Output message's content and number are as expected.",
+                "Test Case ID": "20",
+                "Test Method": "Interface test and requirement test(3 TMQ interfaces simulation)"
+            },
+            "channels": [
+                {
+                    "channel_id": "30015",
+                    "topic_name": "PlanningStatus",
+                    "text_pass": true,
+                    "data_pass": true,
+                    "failed_text_indices": [],
+                    "failed_data_indices": [],
+                    "image_similaritiy": [],
+                    "expected_messages": [
+                        "{\n\t\"status\" : \"kPlanSearching\",\n\t\"timestamp\" : \"0\",\n\t\"tmq_header\" : \n\t{\n\t\t\"tmq_stamp\" : \"0\"\n\t}\n}",
+                        "{\n\t\"status\" : \"kPlanFailed\",\n\t\"timestamp\" : \"1668070640235252987\",\n\t\"tmq_header\" : \n\t{\n\t\t\"tmq_stamp\" : \"1668070640235\"\n\t}\n}"
+                    ],
+                    "output_messages": [
+                        "{\"tmq_header\":{\"tmq_stamp\":\"1671699012767\"},\"timestamp\":\"28279181318656\",\"status\":\"kPlanSearching\"}",
+                        "{\"tmq_header\":{\"tmq_stamp\":\"1671699012771\"},\"timestamp\":\"28279185114497\",\"status\":\"kPlanFailed\"}"
+                    ],
+                    "saved_images": []
+                }
+            ]
+        },
+        {
+            "pass": true,
+            "text_pass": true,
+            "data_pass": true,
+            "descriptions": {
+                "Call Coverage": "",
+                "Calls": "",
+                "Control Flow Document": "https://spaces.telenav.com:8443/display/TC/Planning+-+Software+Detailed+Design",
+                "Control Flow Verification": "Pass",
+                "Data Flow Document": "https://spaces.telenav.com:8443/pages/viewpage.action?pageId=189015770",
+                "Data Flow Verification": "Pass",
+                "Description": "Vertical Parking Lots MOD Rectangle",
+                "Design Document": "https://spaces.telenav.com:8443/display/TC/Planning+-+Software+Detailed+Design",
+                "JIRA ID": "XW-6513",
+                "Pass Criteria": "1, Output message's content and number are as expected.",
+                "Test Case ID": "21",
+                "Test Method": "Interface test and requirement test(3 TMQ interfaces simulation)"
+            },
+            "channels": [
+                {
+                    "channel_id": "30015",
+                    "topic_name": "PlanningStatus",
+                    "text_pass": true,
+                    "data_pass": true,
+                    "failed_text_indices": [],
+                    "failed_data_indices": [],
+                    "image_similaritiy": [],
+                    "expected_messages": [
+                        "{\n\t\"status\" : \"kPlanSearching\",\n\t\"timestamp\" : \"0\",\n\t\"tmq_header\" : \n\t{\n\t\t\"tmq_stamp\" : \"0\"\n\t}\n}",
+                        "{\n\t\"status\" : \"kPlanFailed\",\n\t\"timestamp\" : \"1668070640235252987\",\n\t\"tmq_header\" : \n\t{\n\t\t\"tmq_stamp\" : \"1668070640235\"\n\t}\n}"
+                    ],
+                    "output_messages": [
+                        "{\"tmq_header\":{\"tmq_stamp\":\"1671699024769\"},\"timestamp\":\"28291183434373\",\"status\":\"kPlanSearching\"}",
+                        "{\"tmq_header\":{\"tmq_stamp\":\"1671699024773\"},\"timestamp\":\"28291187515670\",\"status\":\"kPlanFailed\"}"
+                    ],
+                    "saved_images": []
+                }
+            ]
+        },
+        {
+            "pass": true,
+            "text_pass": true,
+            "data_pass": true,
+            "descriptions": {
+                "Call Coverage": "",
+                "Calls": "",
+                "Control Flow Document": "https://spaces.telenav.com:8443/display/TC/Planning+-+Software+Detailed+Design",
+                "Control Flow Verification": "Pass",
+                "Data Flow Document": "https://spaces.telenav.com:8443/pages/viewpage.action?pageId=189015770",
+                "Data Flow Verification": "Pass",
+                "Description": "Angle Parking Lots MOD Rectangle",
+                "Design Document": "https://spaces.telenav.com:8443/display/TC/Planning+-+Software+Detailed+Design",
+                "JIRA ID": "XW-6513",
+                "Pass Criteria": "1, Output message's content and number are as expected.",
+                "Test Case ID": "22",
+                "Test Method": "Interface test and requirement test(3 TMQ interfaces simulation)"
+            },
+            "channels": [
+                {
+                    "channel_id": "30015",
+                    "topic_name": "PlanningStatus",
+                    "text_pass": true,
+                    "data_pass": true,
+                    "failed_text_indices": [],
+                    "failed_data_indices": [],
+                    "image_similaritiy": [],
+                    "expected_messages": [
+                        "{\n\t\"status\" : \"kPlanSearching\",\n\t\"timestamp\" : \"0\",\n\t\"tmq_header\" : \n\t{\n\t\t\"tmq_stamp\" : \"0\"\n\t}\n}",
+                        "{\n\t\"status\" : \"kPlanFailed\",\n\t\"timestamp\" : \"1668070640235252987\",\n\t\"tmq_header\" : \n\t{\n\t\t\"tmq_stamp\" : \"1668070640235\"\n\t}\n}"
+                    ],
+                    "output_messages": [
+                        "{\"tmq_header\":{\"tmq_stamp\":\"1671699036770\"},\"timestamp\":\"28303184723506\",\"status\":\"kPlanSearching\"}",
+                        "{\"tmq_header\":{\"tmq_stamp\":\"1671699036775\"},\"timestamp\":\"28303189005943\",\"status\":\"kPlanFailed\"}"
+                    ],
+                    "saved_images": []
+                }
+            ]
+        },
+        {
+            "pass": false,
+            "text_pass": false,
+            "data_pass": true,
+            "descriptions": {
+                "Call Coverage": "",
+                "Calls": "",
+                "Control Flow Document": "https://spaces.telenav.com:8443/display/TC/Planning+-+Software+Detailed+Design",
+                "Control Flow Verification": "Pass",
+                "Data Flow Document": "https://spaces.telenav.com:8443/pages/viewpage.action?pageId=189015770",
+                "Data Flow Verification": "Pass",
+                "Description": "Horizontal Parking Lots MOD Pentagon",
+                "Design Document": "https://spaces.telenav.com:8443/display/TC/Planning+-+Software+Detailed+Design",
+                "JIRA ID": "XW-6513",
+                "Pass Criteria": "1, Output message's content and number are as expected.",
+                "Test Case ID": "23",
+                "Test Method": "Interface test and requirement test(3 TMQ interfaces simulation)"
+            },
+            "channels": [
+                {
+                    "channel_id": "30015",
+                    "topic_name": "PlanningStatus",
+                    "text_pass": false,
+                    "data_pass": true,
+                    "failed_text_indices": [
+                        1
+                    ],
+                    "failed_data_indices": [],
+                    "image_similaritiy": [],
+                    "expected_messages": [
+                        "{\n\t\"status\" : \"kPlanSearching\",\n\t\"timestamp\" : \"0\",\n\t\"tmq_header\" : \n\t{\n\t\t\"tmq_stamp\" : \"0\"\n\t}\n}",
+                        "{\n\t\"status\" : \"kPlanFailed\",\n\t\"timestamp\" : \"1668070640235252987\",\n\t\"tmq_header\" : \n\t{\n\t\t\"tmq_stamp\" : \"1668070640235\"\n\t}\n}"
+                    ],
+                    "output_messages": [
+                        "{\"tmq_header\":{\"tmq_stamp\":\"1671699048772\"},\"timestamp\":\"28315186891552\",\"status\":\"kPlanSearching\"}",
+                        "{\"tmq_header\":{\"tmq_stamp\":\"1671699049059\"},\"timestamp\":\"28315473588469\",\"status\":\"kPlanSuccessed\"}"
+                    ],
+                    "saved_images": []
+                }
+            ]
+        },
+        {
+            "pass": true,
+            "text_pass": true,
+            "data_pass": true,
+            "descriptions": {
+                "Call Coverage": "",
+                "Calls": "",
+                "Control Flow Document": "https://spaces.telenav.com:8443/display/TC/Planning+-+Software+Detailed+Design",
+                "Control Flow Verification": "Pass",
+                "Data Flow Document": "https://spaces.telenav.com:8443/pages/viewpage.action?pageId=189015770",
+                "Data Flow Verification": "Pass",
+                "Description": "Vertical Parking Lots MOD Pentagon",
+                "Design Document": "https://spaces.telenav.com:8443/display/TC/Planning+-+Software+Detailed+Design",
+                "JIRA ID": "XW-6513",
+                "Pass Criteria": "1, Output message's content and number are as expected.",
+                "Test Case ID": "24",
+                "Test Method": "Interface test and requirement test(3 TMQ interfaces simulation)"
+            },
+            "channels": [
+                {
+                    "channel_id": "30015",
+                    "topic_name": "PlanningStatus",
+                    "text_pass": true,
+                    "data_pass": true,
+                    "failed_text_indices": [],
+                    "failed_data_indices": [],
+                    "image_similaritiy": [],
+                    "expected_messages": [
+                        "{\n\t\"status\" : \"kPlanSearching\",\n\t\"timestamp\" : \"0\",\n\t\"tmq_header\" : \n\t{\n\t\t\"tmq_stamp\" : \"0\"\n\t}\n}",
+                        "{\n\t\"status\" : \"kPlanFailed\",\n\t\"timestamp\" : \"1668070640235252987\",\n\t\"tmq_header\" : \n\t{\n\t\t\"tmq_stamp\" : \"1668070640235\"\n\t}\n}"
+                    ],
+                    "output_messages": [
+                        "{\"tmq_header\":{\"tmq_stamp\":\"1671699060775\"},\"timestamp\":\"28327189249271\",\"status\":\"kPlanSearching\"}",
+                        "{\"tmq_header\":{\"tmq_stamp\":\"1671699060779\"},\"timestamp\":\"28327192954986\",\"status\":\"kPlanFailed\"}"
+                    ],
+                    "saved_images": []
+                }
+            ]
+        },
+        {
+            "pass": true,
+            "text_pass": true,
+            "data_pass": true,
+            "descriptions": {
+                "Call Coverage": "",
+                "Calls": "",
+                "Control Flow Document": "https://spaces.telenav.com:8443/display/TC/Planning+-+Software+Detailed+Design",
+                "Control Flow Verification": "Pass",
+                "Data Flow Document": "https://spaces.telenav.com:8443/pages/viewpage.action?pageId=189015770",
+                "Data Flow Verification": "Pass",
+                "Description": "Angle Parking Lots MOD Pentagon",
+                "Design Document": "https://spaces.telenav.com:8443/display/TC/Planning+-+Software+Detailed+Design",
+                "JIRA ID": "XW-6513",
+                "Pass Criteria": "1, Output message's content and number are as expected.",
+                "Test Case ID": "25",
+                "Test Method": "Interface test and requirement test(3 TMQ interfaces simulation)"
+            },
+            "channels": [
+                {
+                    "channel_id": "30015",
+                    "topic_name": "PlanningStatus",
+                    "text_pass": true,
+                    "data_pass": true,
+                    "failed_text_indices": [],
+                    "failed_data_indices": [],
+                    "image_similaritiy": [],
+                    "expected_messages": [
+                        "{\n\t\"status\" : \"kPlanSearching\",\n\t\"timestamp\" : \"0\",\n\t\"tmq_header\" : \n\t{\n\t\t\"tmq_stamp\" : \"0\"\n\t}\n}",
+                        "{\n\t\"status\" : \"kPlanFailed\",\n\t\"timestamp\" : \"1668070640235252987\",\n\t\"tmq_header\" : \n\t{\n\t\t\"tmq_stamp\" : \"1668070640235\"\n\t}\n}"
+                    ],
+                    "output_messages": [
+                        "{\"tmq_header\":{\"tmq_stamp\":\"1671699072777\"},\"timestamp\":\"28339191540631\",\"status\":\"kPlanSearching\"}",
+                        "{\"tmq_header\":{\"tmq_stamp\":\"1671699072783\"},\"timestamp\":\"28339197287480\",\"status\":\"kPlanFailed\"}"
+                    ],
+                    "saved_images": []
+                }
+            ]
+        }
+    ]
+}
